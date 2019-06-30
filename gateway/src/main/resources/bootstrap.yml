@@ -11,8 +11,27 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - name: Hystrix
+          args:
+            name : default
+            fallbackUri: 'forward:/defaultFallback'
       routes:
         - id: payment-router
           uri: lb://payment-service
           predicates:
             - Path=/pay/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 5
+                key-resolver: '#{@ipKeyResolver}'
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 2000
