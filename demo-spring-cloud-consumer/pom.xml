@@ -8,11 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
-
     <groupId>com.chenbo</groupId>
-    <artifactId>demo-spring-cloud-provider</artifactId>
+    <artifactId>demo-spring-cloud-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo-spring-cloud-provider</name>
+    <name>demo-spring-cloud-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -48,6 +47,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.chenbo.demospringcloudconsumer.DemoSpringCloudConsumerApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

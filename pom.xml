@@ -57,6 +57,7 @@
     <modules>
         <module>demo-spring-cloud-dependencies</module>
         <module>demo-spring-cloud-provider</module>
+        <module>demo-spring-cloud-consumer</module>
     </modules>
 
     <build>
