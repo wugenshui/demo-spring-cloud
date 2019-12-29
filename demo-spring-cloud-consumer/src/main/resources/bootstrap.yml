@@ -2,22 +2,26 @@ spring:
   profiles:
     active: dev
   application:
-    # 服务名
     name: service-consumer-config
   cloud:
     nacos:
       discovery:
-        # 服务注册中心
         server-addr: localhost:8848
       config:
         server-addr: localhost:8848
         file-extension: yaml
+    sentinel:
+      transport:
+        dashboard: localhost:8888
+
+feign:
+  sentinel:
+    enabled: true
 
 server:
   port: 8001
 
 management:
-  # 端点检查
   endpoints:
     web:
       exposure:
