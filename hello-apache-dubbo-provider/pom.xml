@@ -16,10 +16,10 @@
         <java.version>1.8</java.version>
     </properties>
 
-<!--    <modules>-->
-<!--        <module>hello-apache-dubbo-provider-api</module>-->
-<!--        <module>hello-apache-dubbo-provider-service</module>-->
-<!--    </modules>-->
+    <modules>
+        <module>hello-apache-dubbo-provider-api</module>
+        <module>hello-apache-dubbo-provider-service</module>
+    </modules>
 
     <build>
         <plugins>
