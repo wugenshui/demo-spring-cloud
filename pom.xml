@@ -29,6 +29,7 @@
         <module>demo-spring-cloud-consumer</module>
         <module>hello-apache-dubbo-dependencies</module>
         <module>hello-apache-dubbo-provider</module>
+        <module>hello-apache-dubbo-consumer</module>
     </modules>
 
     <build>
