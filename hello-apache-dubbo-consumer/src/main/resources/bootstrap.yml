@@ -3,6 +3,11 @@ spring:
     name: dubbo-consumer
   main:
     allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
 dubbo:
   scan:
     base-packages: com.chenbo.apache.dubbo.consumer.controller
