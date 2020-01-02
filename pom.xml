@@ -31,6 +31,7 @@
         <module>hello-apache-dubbo-provider</module>
         <module>hello-apache-dubbo-consumer</module>
         <module>hello-spring-security-oauth2-dependencies</module>
+        <module>hello-spring-security-oauth2-server</module>
     </modules>
 
     <build>
