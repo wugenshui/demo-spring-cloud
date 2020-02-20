@@ -15,10 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class EchoController {
+
     @Reference(version = "1.0.0")
     private EchoService echoService;
+
     @Value("${user}")
     private String username;
+
     @GetMapping(value = "/echo/{string}")
     public String echo(@PathVariable String string) {
         return echoService.echo(string) + " " + username;
